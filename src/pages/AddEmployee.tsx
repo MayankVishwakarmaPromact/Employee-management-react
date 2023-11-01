@@ -37,7 +37,7 @@ function AddEmployee() {
   function onSubmit() {
     if (validateForm()) {
       const data = {
-        id: employees[employees.length - 1].id + 1,
+        id: employees.length > 0 ? employees[employees.length - 1].id + 1 : 1,
         name: name,
         birthDate: birthDate,
         department: department,
