@@ -32,12 +32,8 @@ const employeeReducer = createSlice({
             }
         },
         editEmployee(state, action) {
-            console.log(action.payload);
-
             const index = state.employees.findIndex((emp) => emp.id === action.payload.id);
-            console.log(index);
-
-            (index > -1) ? state.employees.splice(index, 1, action.payload) : console.log('item Not Found...');
+            (index > -1) ? state.employees.splice(index, 1, action.payload) : alert('Employee Not Found...');
             alert('Employee Details Updated Successfully')
         }
 
